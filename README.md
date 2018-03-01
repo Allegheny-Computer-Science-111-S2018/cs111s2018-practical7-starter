@@ -10,6 +10,7 @@ programmer is responsible for completing all of the steps needed to satisfy the
 requirements for the assignment, thus causing a &#x2714; to instead appear in
 the commit logs.
 
+
 ## Introduction
 
 This assignment requires a programmer to implement and test a Java program,
@@ -29,8 +30,10 @@ implementation:
 * The `YearChecker` program must:
   * Contain at least nine single-line comments and two multi-line comments
   * Call the `println` method nine times to produce the desired output
-  * Declare and use an `int sum` variable
-  * Declare or use the `REFERENCE_YEAR` variable at least three times
+  * Use `if` statements at least four times
+  * Use an `else` statement at least once
+  * Use  `==` for comparison at least three times
+  * Use the declared `REFERENCE_YEAR` variable at least three times
 
 When you use the `git commit` command to transfer your source code to your
 GitHub repository, [Travis CI](https://travis-ci.com/) will initialize a build

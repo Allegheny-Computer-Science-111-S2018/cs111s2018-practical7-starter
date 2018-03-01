@@ -147,9 +147,9 @@ if [ "$CHECK" = true ]; then
   # ADD ADDITIONAL CALLS TO BOTH gatorgrader.py and determine_exit_code HERE
   # --> GatorGrader CHECK: the correct number of comments in the Java code
   python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalseven/ \
-                                     --checkfiles YearChecker.java --singlecomments 9 --multicomments 3 --language Java
+                                     --checkfiles YearChecker.java --singlecomments 9 --multicomments 2 --language Java
   determine_exit_code $?
-  # --> GatorGrader CHECK: the "int sum" fragment exists in the code at least once
+  # --> GatorGrader CHECK: the "new Date" fragment exists in the code at least once
   python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalseven/ \
                                      --checkfiles YearChecker.java --fragments "new Date(" --fragmentcounts 1
   determine_exit_code $?
@@ -173,7 +173,11 @@ if [ "$CHECK" = true ]; then
   python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalseven/ \
                                      --checkfiles YearChecker.java --fragments "REFERENCE_YEAR" --fragmentcounts 2
   determine_exit_code $?
-  
+  # --> GatorGrader CHECK: the "boolean" fragment exists in the code at least once
+  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalseven/ \
+                                     --checkfiles YearChecker.java --fragments "boolean" --fragmentcounts 1
+  determine_exit_code $?
+
   echo ""
   printf "%s\n" "${blu}... Finished checking with GatorGrader${end}"
 
